@@ -30,7 +30,7 @@
 
 # 🏢 Odoo Advanced ERP Modules - Vận Hành Thông Minh & Tự Động Hóa
 
-[![Platform](https://img.shields.io/badge/Platform-Odoo%20v16%2F17-purple)](https://www.odoo.com/)
+[![Platform](https://img.shields.io/badge/Platform-Odoo%20v19-purple)](https://www.odoo.com/)
 [![Focus](https://img.shields.io/badge/Focus-Automation%20%26%20AI%20Integration-blue)](#)
 [![Role](https://img.shields.io/badge/Role-Product%20Owner%20%2F%20System%20Architect-orange)](#)
 
