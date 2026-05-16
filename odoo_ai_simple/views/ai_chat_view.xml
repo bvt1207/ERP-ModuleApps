@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ai_chat_form" model="ir.ui.view">
+        <field name="name">ai.chat.form</field>
+        <field name="model">ai.chat</field>
+        <field name="arch" type="xml">
+            <form string="AI Chat">
+                <header>
+                    <button name="action_ask_ai" string="🚀 Gửi cho AI" type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="question" placeholder="Nhập câu hỏi của bạn vào đây..."/>
+                    </group>
+                    <group string="🤖 AI Trả lời">
+                        <field name="answer" widget="html" options="{'style-inline': true}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ai_chat_list" model="ir.ui.view">
+        <field name="name">ai.chat.list</field>
+        <field name="model">ai.chat</field>
+        <field name="arch" type="xml">
+            <list string="Lịch sử AI">
+                <field name="name"/>
+                <field name="create_uid" string="Người hỏi"/>
+                <field name="create_date"/>
+                <field name="state" widget="badge" decoration-success="state == 'done'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_ai_chat" model="ir.actions.act_window">
+        <field name="name">Hỏi đáp AI</field>
+        <field name="res_model">ai.chat</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_ai_root" name="AI Assistant" sequence="1"/>
+    <menuitem id="menu_ai_chat" name="Chat với AI" parent="menu_ai_root" action="action_ai_chat"/>
+</odoo>
